@@ -10,6 +10,10 @@
   <div id="map" class="map"></div>
   <script>
     var tokyo = ol.proj.fromLonLat(139.75835, 35.68299]);
+    var view = new ol.View({
+      center: tokyo,
+      zoom: 13
+    });
     var map = new ol.Map({
       layers: [
         new ol.layer.Tile({
@@ -17,10 +21,7 @@
         })
       ],
       target: 'map',
-      view: new ol.View({
-        center: tokyo,
-        zoom: 13
-      })
+      view: view
     });
   </script>
   </body>
